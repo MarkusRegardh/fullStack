@@ -121,7 +121,7 @@ const App = () => {
            }, 3000)
            
           }).catch(e =>{
-            setError(`${newName} has already been removed from server`)
+            setError(`${e.response.data.error}`)
             setTimeout(() => {
             setError(null)
            }, 3000)
@@ -135,13 +135,17 @@ const App = () => {
     event.preventDefault()
     personService.postPerson({name: newName, number: newNumber}).then(response => {
       setPersons(persons.concat(response))
-    })
+      setSuccess(`${newName} added`)
+      setTimeout(() => {
+        setSuccess(null)
+      }, 3000)
+    }).catch(e => {setError(`${e.response.data.error}`)
+    setTimeout(() => {
+    setError(null)
+   }, 3000)})
     setNewName('')
     setNewNumber('')
-    setSuccess(`${newName} added`)
-    setTimeout(() => {
-      setSuccess(null)
-    }, 3000)
+   
   }}
 
   
