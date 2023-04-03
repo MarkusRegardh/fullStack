@@ -1,0 +1,3 @@
+/src/components/*.test.js
+cypress.config.js
+/cypress/*
