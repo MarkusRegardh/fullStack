@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/blogs HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjY0MjQ0OWM5NjM4MGE4NmRjMjc4YTFjNSIsImlhdCI6MTY4MDEwMDE2Mn0.AJYmU7Ol8CEN6JjKW8lcwi013uGfGKojJFKT7hadAhw
+{
+    "title":"Aadad",
+    "author": "hello",
+    "url": "www.morjes.com",
+    "likes": 3
+}
